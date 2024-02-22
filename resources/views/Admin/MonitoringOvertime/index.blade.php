@@ -24,8 +24,7 @@
                                         Tambah Data Monitoring Overtime
                                         <i class="bx bx-plus float-right mt-1 mr-2"></i>
                                     </a>
-                                    <table id="datatable" class="table table-bordered dt-responsive nowrap"
-                                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <table id="basic-datatable" class="table dt-responsive nowrap">
                                             <thead>
                                                 <tr>
@@ -39,31 +38,27 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                    @foreach ($list_monitoringovertime as $monitoringovertime)
-                                                        <tr>
-                                                            <td>{{ $loop->iteration }}</td>
-                                                            <td>
-                                                                <div class="btn-group ml-2">
-                                                                        <a href="{{ url('MoinitoringOvertime', $monitoringovertime->id) }}"
-                                                                            class="btn btn-sm btn-dark">
-                                                                            <i class="bx bx-info-circle"></i></a>
-                                                                        <a href="{{ url('DataPegawai', $monitoringovertime->id) }}/edit"
-                                                                            class="btn btn-sm btn-warning btn-mat">
-                                                                            <i class="bx bx-edit"></i></a>
-                                                                        <x-button.delete id="{{ $monitoringovertime->id }}"
-                                                                            path="{{ $monitoringovertime->path }}" />
-                                                                    
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                            {{$monitoringovertime->nama_pegawai}}
-                                                            </td>
-                                                            <td>{{$monitoringovertime->tgl_lahir}}</td>
-                                                            <td>{{$monitoringovertime->tempat_lahir}}</td>
-                                                            <td>{{$monitoringovertime->jenis_kelamin}}</td>
-                                                            <td>{{$monitoringovertime->jam_lembur}}</td>
-                                                        </tr>
-                                                    @endforeach
+                                                @foreach ($list_monitoringovertime as $monitoringovertime)
+                                                <tr>
+                                                    <td>{{ $loop->iteration }}</td>
+                                                    <td>
+                                                        <div class="btn-group ml-2">
+                                                            <a href="{{ url('MonitoringOvertime', $monitoringovertime->id) }}" class="btn btn-sm btn-dark">
+                                                                <i class="bx bx-info-circle"></i></a>
+                                                            <a href="{{ url('MonitoringOvertime', $monitoringovertime->id) }}/edit" class="btn btn-sm btn-warning btn-mat">
+                                                                <i class="bx bx-edit"></i></a>
+                                                            <x-button.delete url="MonitoringOvertime" id="{{ $monitoringovertime->id }}" />
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        {{$monitoringovertime->nama_pegawai}}
+                                                    </td>
+                                                    <td>{{$monitoringovertime->tgl_lahir}}</td>
+                                                    <td>{{$monitoringovertime->tempat_lahir}}</td>
+                                                    <td>{{$monitoringovertime->jenis_kelamin}}</td>
+                                                    <td>{{$monitoringovertime->jam_lembur}}</td>
+                                                </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </table>

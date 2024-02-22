@@ -8,10 +8,12 @@ use Illuminate\Http\Request;
 
 class AbsensiController extends Controller
 {
-    function index(){
+    function index()
+    {
         $data['list_absensi'] = Absensi::all();
         return view('Admin.Absensi.index', $data);
     }
+
     function create()
     {
         return view('Admin.Absensi.create');
@@ -19,8 +21,7 @@ class AbsensiController extends Controller
 
     function store(Request $request)
     {
-        $request->validate([
-        ]);
+        $request->validate([]);
 
         $absensi = new Absensi();
         $absensi->nama_pegawai = request('nama_pegawai');
@@ -31,7 +32,7 @@ class AbsensiController extends Controller
         $absensi->no_hp = request('no_hp');
         $absensi->from_aplod = request('from_aplod');
         $absensi->kriteria = request('kriteria');
-        
+
 
         $absensi->handLeUploadFoto();
         $absensi->save();
@@ -39,13 +40,11 @@ class AbsensiController extends Controller
         return redirect('Absensi')->with('success', 'Data Berhasil Di Simpan');
     }
 
-
     function show(Absensi $absensi)
     {
         $data['absensi'] = $absensi;
         return view('Admin.Absensi.show', $data);
     }
-
 
     function edit(Absensi $absensi)
     {
@@ -53,9 +52,11 @@ class AbsensiController extends Controller
         $data['absensi'] = $absensi;
         return view('Admin.Absensi.edit', $data);
     }
-    function destroy(Absensi $absensi){
+
+    function destroy(Absensi $absensi)
+    {
         $absensi->delete();
 
-        return redirect('Admin.Absensi')->with('danger', 'Data Berhasil Dihapus');
+        return redirect('Absensi')->with('danger', 'Data Berhasil Dihapus');
     }
 }

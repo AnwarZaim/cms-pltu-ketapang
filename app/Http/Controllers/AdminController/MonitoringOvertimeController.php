@@ -13,6 +13,7 @@ class MonitoringOvertimeController extends Controller
         $data['list_monitoringovertime'] = MonitoringOvertime::all();
         return view('Admin.MonitoringOvertime.index', $data);
     }
+
     function create()
     {
         return view('Admin.MonitoringOvertime.create');
@@ -29,11 +30,9 @@ class MonitoringOvertimeController extends Controller
         $monitoringovertime->jenis_kelamin = request('jenis_kelamin');
         $monitoringovertime->jam_lembur = request('jam_lembur');
 
-
-
-        $monitoringovertime->handLeUploadFoto();
         $monitoringovertime->save();
 
+        $monitoringovertime->handLeUploadFoto();
         return redirect('MonitoringOvertime')->with('success', 'Data Berhasil Di Simpan');
     }
 
@@ -44,17 +43,17 @@ class MonitoringOvertimeController extends Controller
         return view('Admin.MonitoringOvertime.show', $data);
     }
 
-
     function edit(MonitoringOvertime $monitoringovertime)
     {
         $data['list_monitoringovertime'] = MonitoringOvertime::all();
         $data['monitoringovertime'] = $monitoringovertime;
         return view('Admin.MonitoringOvertime.edit', $data);
     }
+
     function destroy(MonitoringOvertime $monitoringovertime)
     {
         $monitoringovertime->delete();
 
-        return redirect('Admin.MonitoringOvertime')->with('danger', 'Data Berhasil Dihapus');
+        return redirect('MonitoringOvertime')->with('danger', 'Data Berhasil Dihapus');
     }
 }

@@ -59,21 +59,35 @@ class DataPegawaiController extends Controller
 
         return redirect('DataPegawai')->with('success', 'Data Berhasil Di Simpan');
     }
-    function show(Pegawai $pegawai)
+    // function show(Pegawai $pegawai)
+    // {
+    //     $data['pegawai'] = $pegawai;
+    //     return view('Admin.DataPegawai.show', $data);
+    // }
+    public function show($id)
     {
-        $data['pegawai'] = $pegawai;
-        return view('Admin.DataPegawai.show', $data);
+        return view('Admin.DataPegawai.show', [
+            'pegawai' => Pegawai::findOrFail($id),
+        ]);
     }
-    function edit(Pegawai $pegawai)
+    // function edit(Pegawai $pegawai)
+    // {
+    //     $data['list_pegawai'] = Pegawai::all();
+    //     $data['pegawai'] = $pegawai;
+    //     return view('Admin.DataPegawai.edit', $data);
+    // }
+
+    public function edit($id)
     {
-        $data['list_pegawai'] = Pegawai::all();
-        $data['pegawai'] = $pegawai;
-        return view('Admin.DataPegawai.edit', $data);
+        return view('Admin.DataPegawai.edit', [
+            'pegawai' => Pegawai::findOrFail($id),
+        ]);
     }
-    function update(Pegawai $pegawai)
-    {
 
 
+    function update($id)
+    {
+        $pegawai = Pegawai::find($id);
         if (request('nama_pegawai')) $pegawai->nama_pegawai = request('nama_pegawai');
         if (request('nid')) $pegawai->nid = request('nid');
         if (request('tgl_lahir')) $pegawai->tgl_lahir = request('tgl_lahir');
@@ -84,14 +98,25 @@ class DataPegawaiController extends Controller
         if (request('masa_kerja_mulai')) $pegawai->masa_kerja_selesai = request('masa_kerja_selesai');
         if (request('masa_kontrak')) $pegawai->masa_kontrak = request('masa_kontrak');
 
-        if (request('foto')) $pegawai->handLeUploadFoto();
         $pegawai->save();
+
+        if (request('foto')) $pegawai->handLeUploadFoto();
+
+        return redirect('DataPegawai')->with('success', 'Berhasil di Edit');
     }
 
-    function destroy(Pegawai $pegawai)
-    {
-        $pegawai->delete();
+    // function destroy(Pegawai $pegawai)
+    // {
+    //     $pegawai->delete();
 
-        return redirect('Admin.DataPegawai')->with('danger', 'Data Berhasil Dihapus');
+    //     return redirect('DataPegawai')->with('danger', 'Data Berhasil Dihapus');
+    // }
+
+    function destroy($id)
+    {
+        $pegawai = Pegawai::find($id);
+        $pegawai->handleDelete();
+        $pegawai->delete();
+        return redirect('DataPegawai')->with('danger', 'Data Berhasil Dihapus');
     }
 }

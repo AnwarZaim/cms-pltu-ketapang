@@ -20,12 +20,10 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Data Pegawai</h4>
-                                    <a href="{{url('DataPegawai/create')}}" class="btn  waves-effect waves-light mb-3 float-end mt-1 " style="border: 1px solid #696CFF; color:#696CFF;"><i class="bx bx-plus float-right mt-1 mr-2"></i> 
+                                    <a href="{{url('DataPegawai/create')}}" class="btn  waves-effect waves-light mb-3 float-end mt-1 " style="border: 1px solid #696CFF; color:#696CFF;"><i class="bx bx-plus float-right mt-1 mr-2"></i>
                                         Tambah Data Pegawai
-                                       
                                     </a>
-                                    <table id="datatable" class="table table-bordered dt-responsive nowrap"
-                                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <table id="basic-datatable" class="table dt-responsive nowrap">
                                             <thead>
                                                 <tr>
@@ -43,35 +41,31 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                    @foreach ($list_pegawai as $pegawai)
-                                                        <tr>
-                                                            <td>{{ $loop->iteration }}</td>
-                                                            <td>
-                                                                <div class="btn-group ml-2">
-                                                                        <a href="{{ url('DataPegawai', $pegawai->id) }}"
-                                                                            class="btn btn-sm btn-dark">
-                                                                            <i class="bx bx-info-circle"></i></a>
-                                                                        <a href="{{ url('DataPegawai', $pegawai->id) }}/edit"
-                                                                            class="btn btn-sm btn-warning btn-mat">
-                                                                            <i class="bx bx-edit"></i></a>
-                                                                        <x-button.delete id="{{ $pegawai->id }}"
-                                                                            path="{{ $pegawai->path }}" />
-                                                                    
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                            {{$pegawai->nama_pegawai}}
-                                                            </td>
-                                                            <td>{{$pegawai->nid}}</td>
-                                                            <td>{{$pegawai->tgl_lahir}}</td>
-                                                            <td>{{$pegawai->tempat_lahir}}</td>
-                                                            <td>{{$pegawai->jenis_kelamin}}</td>
-                                                            <td>{{$pegawai->status}}</td>
-                                                            <td>{{$pegawai->masa_kerja_mulai}}</td>
-                                                            <td>{{$pegawai->masa_kerja_selesai}}</td>
-                                                            <td>{{$pegawai->masa_kontrak}}</td>
-                                                        </tr>
-                                                    @endforeach
+                                                @foreach ($list_pegawai as $pegawai)
+                                                <tr>
+                                                    <td>{{ $loop->iteration }}</td>
+                                                    <td>
+                                                        <div class="btn-group ml-2">
+                                                            <a href="{{ url('DataPegawai', $pegawai->id) }}" class="btn btn-sm btn-dark">
+                                                                <i class="bx bx-info-circle"></i></a>
+                                                            <a href="{{ url('DataPegawai', $pegawai->id) }}/edit" class="btn btn-sm btn-warning btn-mat">
+                                                                <i class="bx bx-edit"></i></a>
+                                                            <x-button.delete id="{{ $pegawai->id }}" url="DataPegawai" />
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        {{$pegawai->nama_pegawai}}
+                                                    </td>
+                                                    <td>{{$pegawai->nid}}</td>
+                                                    <td>{{$pegawai->tgl_lahir}}</td>
+                                                    <td>{{$pegawai->tempat_lahir}}</td>
+                                                    <td>{{$pegawai->jenis_kelamin}}</td>
+                                                    <td>{{$pegawai->status}}</td>
+                                                    <td>{{$pegawai->masa_kerja_mulai}}</td>
+                                                    <td>{{$pegawai->masa_kerja_selesai}}</td>
+                                                    <td>{{$pegawai->masa_kontrak}}</td>
+                                                </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </table>

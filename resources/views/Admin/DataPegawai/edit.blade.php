@@ -23,90 +23,67 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Edit Data Pegawai</h4>
                                     <div class="table-responsive">
-                                        <a href="{{ url('DataPegawai') }}" class="btn btn-sm btn-default mb-2"
-                                            style="border: 1px solid #696CFF; color:#696CFF"><i
-                                                class="bx bx-chevron-left "></i>Kembali</a>
+                                        <a href="{{ url('DataPegawai') }}" class="btn btn-sm btn-default mb-2" style="border: 1px solid #696CFF; color:#696CFF"><i class="bx bx-chevron-left "></i>Kembali</a>
                                         <table class="table table-editable table-nowrap align-middle table-edits">
-                                            <form action="{{ url('Pegawai', $pegawai->id) }}" method="post">
+                                            <form action="{{ url('DataPegawai', $pegawai->id) }}" method="post">
                                                 @csrf
                                                 @method('PUT')
                                                 <div class="row">
                                                     <div class="col-md-12 mb-3">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Nama Pegawai" name="nama_pegawai"
-                                                                value="{{ $pegawai->nama_pegawai }}">
+                                                            <input type="text" class="form-control" placeholder="Nama Pegawai" name="nama_pegawai" value="{{ $pegawai->nama_pegawai }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" placeholder="NID"
-                                                                name="nid" value="{{ $pegawai->nid }}">
+                                                            <input type="text" class="form-control" placeholder="NID" name="nid" value="{{ $pegawai->nid }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Tanggal Lahir" name="tgl_lahir"
-                                                                value="{{ $pegawai->tgl_kahir }}">
+                                                            <input type="text" class="form-control" placeholder="Tanggal Lahir" name="tgl_lahir" value="{{ $pegawai->tgl_kahir }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Tempat Lahir" name="tempat_lahir"
-                                                                value="{{ $pegawai->tempat_lahir }}">
+                                                            <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" value="{{ $pegawai->tempat_lahir }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Jens Kelamin" name="jenis_kelamin"
-                                                                value="{{ $pegawai->jenis_kelamin }}">
+                                                            <input type="text" class="form-control" placeholder="Jens Kelamin" name="jenis_kelamin" value="{{ $pegawai->jenis_kelamin }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Status" name="status"
-                                                                value="{{ $pegawai->status }}">
+                                                            <input type="text" class="form-control" placeholder="Status" name="status" value="{{ $pegawai->status }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Masa Kerja Mulai" name="masa_kerja_mulai"
-                                                                value="{{ $pegawai->masa_kerja_mulai }}">
+                                                            <input type="text" class="form-control" placeholder="Masa Kerja Mulai" name="masa_kerja_mulai" value="{{ $pegawai->masa_kerja_mulai }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Masa Kerja Selesai" name="masa_kerja_selesai"
-                                                                value="{{ $pegawai->masa_kerja_selesai }}">
+                                                            <input type="text" class="form-control" placeholder="Masa Kerja Selesai" name="masa_kerja_selesai" value="{{ $pegawai->masa_kerja_selesai }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Masa Kontrak" name="masa_kontrak"
-                                                                value="{{ $pegawai->masa_kontrak }}">
+                                                            <input type="text" class="form-control" placeholder="Masa Kontrak" name="masa_kontrak" value="{{ $pegawai->masa_kontrak }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Foto" name="foto"
-                                                                value="{{ $pegawai->foto }}">
+                                                            <input type="text" class="form-control" placeholder="Foto" name="foto" value="{{ $pegawai->foto }}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <br>
                                                 <div class="button-group float-end">
-                                                    <button class="btn btn-sm waves-effect waves-light ml-3 float-end" style="border: 1px solid red; color:red"
-                                                    type="submit">BATAL</button>
-                                                <button class="btn btn-sm waves-effect waves-light float-end" style="border: 1px solid #696CFF; color:#696CFF;margin-right:5px"
-                                                    type="submit">SIMPAN</button>
+                                                    <button class="btn btn-sm waves-effect waves-light ml-3 float-end" style="border: 1px solid red; color:red" type="submit">BATAL</button>
+                                                    <button class="btn btn-sm waves-effect waves-light float-end" style="border: 1px solid #696CFF; color:#696CFF;margin-right:5px" type="submit">SIMPAN</button>
                                                 </div>
                                             </form>
                                         </table>

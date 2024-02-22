@@ -18,34 +18,37 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('Dashboard',[DashboardController::class,'index']);
+Route::get('Dashboard', [DashboardController::class, 'index']);
 
 
 
 //Data Pegawai//
-Route::get('DataPegawai',[DataPegawaiController::class,'index']);
-Route::get('DataPegawai/create',[DataPegawaiController::class,'create']);
-Route::post('DataPegawai',[DataPegawaiController::class,'store']);
-Route::get('DataPegawai/{pegawai}',[DataPegawaiController::class,'show']);
-Route::get('DataPegawai/{pegawai}/edit',[DataPegawaiController::class,'edit']);
-Route::put('DataPegawai/{pegawai}',[DataPegawaiController::class,'update']);
-Route::delete('DataPegawai/{pegawai}',[DataPegawaiController::class,'destroy']);
+// Route::get('DataPegawai',[DataPegawaiController::class,'index']);
+// Route::get('DataPegawai/create',[DataPegawaiController::class,'create']);
+// Route::post('DataPegawai',[DataPegawaiController::class,'store']);
+// Route::get('DataPegawai/{pegawai}',[DataPegawaiController::class,'show']);
+// Route::get('DataPegawai/{pegawai}/edit',[DataPegawaiController::class,'edit']);
+// Route::put('DataPegawai/{pegawai}',[DataPegawaiController::class,'update']);
+// Route::delete('DataPegawai/{pegawai}',[DataPegawaiController::class,'destroy']);
+
+// INI KEPANJANGAN PAKE RESOURCE YAK
+Route::resource('DataPegawai', DataPegawaiController::class);
 
 
 
 //Absensi//
-Route::get('Absensi',[AbsensiController::class,'index']);
-Route::get('Absensi/create',[AbsensiController::class,'create']);
-Route::post('Absensi',[AbsensiController::class,'store']);
-Route::get('Absensi/{absensi}',[AbsensiController::class,'show']);
-Route::get('Absensi/{absensi/edit',[AbsensiController::class,'edit']);
-Route::delete('Absensi/{absensi}',[AbsensiController::class,'destroy']);
+Route::get('Absensi', [AbsensiController::class, 'index']);
+Route::get('Absensi/create', [AbsensiController::class, 'create']);
+Route::post('Absensi', [AbsensiController::class, 'store']);
+Route::get('Absensi/{absensi}', [AbsensiController::class, 'show']);
+Route::get('Absensi/{absensi/edit', [AbsensiController::class, 'edit']);
+Route::delete('Absensi/{absensi}', [AbsensiController::class, 'destroy']);
 
 
 //Monitorng Overtime//
-Route::get('MonitoringOvertime',[MonitoringOvertimeController::class,'index']);
-Route::get('MonitoringOvertime/create',[MonitoringOvertimeController::class,'create']);
-Route::post('MonitoringOvertime',[MonitoringOvertimeController::class,'store']);
-Route::get('MonitoringOvertime/{MonitoringOvertime}',[MonitoringOvertimeController::class,'show']);
-Route::get('MonitoringOvertime/{MonitoringOvertime/edit',[MonitoringOvertimeController::class,'edit']);
-Route::delete('MonitoringOvertime/{MonitoringOvertime}',[AbsensiController::class,'destroy']);
+Route::get('MonitoringOvertime', [MonitoringOvertimeController::class, 'index']);
+Route::get('MonitoringOvertime/create', [MonitoringOvertimeController::class, 'create']);
+Route::post('MonitoringOvertime', [MonitoringOvertimeController::class, 'store']);
+Route::get('MonitoringOvertime/{monitoringovertime}', [MonitoringOvertimeController::class, 'show']);
+Route::get('MonitoringOvertime/{monitoringovertime}/edit', [MonitoringOvertimeController::class, 'edit']);
+Route::delete('MonitoringOvertime/{monitoringovertime}', [MonitoringOvertimeController::class, 'destroy']);
