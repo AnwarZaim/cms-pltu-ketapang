@@ -40,18 +40,6 @@
                                                         Masukan Nama Pegawai
                                                     </div>
                                                 </div>
-                                                {{-- <div class="col-md-4 mb-3">
-                                                        <label for="validationCustom01">ID Pegawai</label>
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                            </div>
-                                                            <input type="text" class="form-control" id="validationCustom01"
-                                                                placeholder="ID Pegawai" aria-describedby="inputGroupPrepend" required name="id_pegawai">
-                                                            <div class="invalid-feedback">
-                                                                Masukan Id Pegawai.
-                                                            </div>
-                                                        </div>
-                                                    </div> --}}
                                                 <div class="col-md-4 mb-3">
                                                     <label for="validationCustom03">Tanggal Lahir</label>
                                                     <input type="date" class="form-control" id="validationCustom03"
@@ -108,10 +96,11 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button class="btn btn-primary waves-effect waves-light float-right"
-                                                type="submit">SIMPAN</button>
-                                            <button class="btn btn-primary waves-effect waves-light float-right mr-3"
-                                                type="submit">BATAL</button>
+                                            <button class="btn btn-sm waves-effect waves-light ml-3 float-end" style="border: 1px solid red; color:red"
+                                                    type="submit">BATAL</button>
+                                                <button class="btn btn-sm waves-effect waves-light float-end" style="border: 1px solid #696CFF; color:#696CFF;margin-right:5px
+                                                "
+                                                    type="submit">SIMPAN</button>
                                         </form>
 
                                     </div>

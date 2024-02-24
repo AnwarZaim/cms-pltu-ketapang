@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
-class Absensi extends Model
+class AreaKerja extends Model
 {
-    protected $table = 'absensi';
+    protected $table = 'areakerja';
     protected $fillable = [
-        'id','nama_pegawai','tgl_lahir','tempat_lahir','jenis_kelamin','no_hp','form_upload','kriteria'
+        'id','nama_pegawai','tempat_kerja','bulan','tahun','from_upload'
     ];
     function handLeUploadFoto()
     {

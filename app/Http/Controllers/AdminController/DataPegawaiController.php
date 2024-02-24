@@ -50,9 +50,15 @@ class DataPegawaiController extends Controller
         $pegawai->tempat_lahir = request('tempat_lahir');
         $pegawai->jenis_kelamin = request('jenis_kelamin');
         $pegawai->status = request('status');
-        $pegawai->masa_kerja_mulai = request('masa_kerja_mulai');
-        $pegawai->masa_kerja_selesai = request('masa_kerja_selesai');
-        $pegawai->masa_kontrak = request('masa_kontrak');
+        $pegawai->pendidikan = request('pendidikan');
+        $pegawai->sekolah_universitas= request('sekolah_universitas');
+        $pegawai->alamat_ktp = request('alamat_ktp');
+        $pegawai->alamat_domisili = request('alamat_domisili');
+        $pegawai->no_hp = request('no_hp');
+        $pegawai->email = request('email');
+        $pegawai->ftk_nonftk = request('ftk_nonftk');
+        $pegawai->jabatan = request('jabatan');
+        $pegawai->klasifikasi_bidang= request('klasifikasi_bidang');
 
         $pegawai->handLeUploadFoto();
         $pegawai->save();
@@ -94,12 +100,17 @@ class DataPegawaiController extends Controller
         if (request('tempat_lahir')) $pegawai->tempat_lahir = request('tempat_lahir');
         if (request('jenis_kelamin')) $pegawai->jenis_kelamin = request('jenis_kelamin');
         if (request('status')) $pegawai->status = request('status');
-        if (request('masa_kerja_mulai')) $pegawai->masa_kerja_mulai = request('masa_kerja_mulai');
-        if (request('masa_kerja_mulai')) $pegawai->masa_kerja_selesai = request('masa_kerja_selesai');
-        if (request('masa_kontrak')) $pegawai->masa_kontrak = request('masa_kontrak');
+        if (request('pendidikan')) $pegawai->pendidikan = request('pendidikan');
+        if (request('sekolah_universitas')) $pegawai->sekolah_universitas = request('sekolah_universitas');
+        if (request('alamat_ktp')) $pegawai->alamat_ktp = request('alamat_ktp');
+        if (request('alamat_domisili')) $pegawai->alamat_domisil = request('alamat_domisili');
+        if (request('no_hp')) $pegawai->no_hp = request('no_hp');
+        if (request('email')) $pegawai->email = request('email');
+        if (request('ftk_nonftk')) $pegawai->alamat_ktp = request('ftk_nonftk');
+        if (request('jabatan')) $pegawai->alamat_ktp = request('jabatan');
+        if (request('klasifikasi_bidang')) $pegawai->alamat_ktp = request('klasifikasi_bidang');
 
         $pegawai->save();
-
         if (request('foto')) $pegawai->handLeUploadFoto();
 
         return redirect('DataPegawai')->with('success', 'Berhasil di Edit');

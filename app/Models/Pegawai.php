@@ -10,7 +10,7 @@ class Pegawai extends Model
 {
     protected $table = 'pegawai';
     protected $fillable = [
-        'id','nama_pegawai','nid','tgl_lahir','tempat_lahir','jenis_kelamin','status','masa_kerja_mulai','masa_kerja_selesai','masa_kontrak','foto'
+        'id','nama_pegawai','nid','tgl_lahir','tempat_lahir','jenis_kelamin','status','pendidikan','sekolah_universitas','alamat_ktp','alamat_domisili','no_hp','email','ftk_nonftk','jabatan','klasifikasi_bidang','foto'
     ];
     function handLeUploadFoto()
     {

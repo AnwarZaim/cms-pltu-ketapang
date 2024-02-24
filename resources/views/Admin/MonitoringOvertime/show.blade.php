@@ -7,7 +7,7 @@
                     <div class="col-12">
                         <div class="page-title-box d-flex align-items-center justify-content-between">
                             <div class="page-title">
-                                <h4 class="mb-0 font-size-18">Show Data Monitoring Overtime | Cleaning Servis</h4>
+                                <h4 class="mb-0 font-size-18">Show Data Absensi | Cleaning Servis</h4>
                                 <ol class="breadcrumb">
                                 </ol>
                             </div>
@@ -21,8 +21,8 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Show Data Monitoring Overtime</h4>
-                                    <a href="{{ url('MoinitoringOvertime') }}" class="btn btn-sm btn-default mb-2"
+                                    <h4 class="card-title">Show Data Absensi</h4>
+                                    <a href="{{ url('MonitoringOvertime') }}" class="btn btn-sm btn-default mb-2"
                                         style="border: 1px solid #696CFF; color:#696CFF"><i
                                             class="bx bx-chevron-left "></i>Kembali</a>
                                     <div class="table-responsive">
@@ -30,6 +30,10 @@
                                             <dl class="row">
                                                 <dt class="col-md-4">Nama Pegawai</dt>
                                                 <dd class="col-md-8">: {{ $monitoringovertime->nama_pegawai }}</dd>
+                                            </dl>
+                                            <dl class="row">
+                                                <dt class="col-md-4">Id Pegawai</dt>
+                                                <dd class="col-md-8">: {{ $monitoringovertime->id_pegawai }}</dd>
                                             </dl>
                                             <dl class="row">
                                                 <dt class="col-md-4">Tangal Lahir</dt>
@@ -47,6 +51,7 @@
                                                 <dt class="col-md-4">Jam Lembur</dt>
                                                 <dd class="col-md-8">: {{ $monitoringovertime->jam_lembur }}</dd>
                                             </dl>
+
                                         </table>
                                     </div>
                                 </div>

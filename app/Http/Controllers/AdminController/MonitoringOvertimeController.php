@@ -19,9 +19,29 @@ class MonitoringOvertimeController extends Controller
         return view('Admin.MonitoringOvertime.create');
     }
 
+
     function store(Request $request)
     {
-        $request->validate([]);
+        // $request->validate([
+        //     'nama_pegawai' => 're    quired',
+        //     'nid' => 'required|unique:pegawai',
+        //     'tgl_lahir' => 'required',
+        //     'tempat_lahir' => 'required',
+        //     'jenis_kelamin' => ['required', 'in:Laki-laki,Perempuan'],
+        //     'status' => ['required', 'in:Belum menikah,Sudah menikah,Duda,Janda'],
+        //     'masa_kerja_mulai' => 'required',
+        //     'masa_kontrak' => 'required',
+        // ], [
+        //     'nama_pegawai.required' => 'Nama Pegwai Wajib Diisi',
+        //     'nid.required' => 'NID Wwajib Diisi',
+        //     'nid.unique' => 'NID ini Sudah Digunakan',
+        //     'tgl_lahir.required' => 'Tanggal Lahir Wajib Diisi',
+        //     'tempat_lahir.required' => 'Tempat Lahir Wajib Diisi',
+        //     'jenis_kelamin.required' => 'Jenis Kelamin Wajib Diisi',
+        //     'status.required' => 'Status Wajib Diisi',
+        //     'masa_kerja_mulai.required' => 'Masa Kerja Mulai Wajib Diisi',
+        //     'masa_kontrak.required' => 'Masa Kontrak Wajib Diisi',
+        // ]);
 
         $monitoringovertime = new MonitoringOvertime();
         $monitoringovertime->nama_pegawai = request('nama_pegawai');
@@ -30,30 +50,40 @@ class MonitoringOvertimeController extends Controller
         $monitoringovertime->jenis_kelamin = request('jenis_kelamin');
         $monitoringovertime->jam_lembur = request('jam_lembur');
 
-        $monitoringovertime->save();
+
 
         $monitoringovertime->handLeUploadFoto();
         return redirect('MonitoringOvertime')->with('success', 'Data Berhasil Di Simpan');
     }
-
-
-    function show(MonitoringOvertime $monitoringovertime)
+    // function show(Pegawai $absensi)
+    // {
+    //     $data['pegawai'] = $absensi;
+    //     return view('Admin.DataPegawai.show', $data);
+    // }
+    public function show($id)
     {
-        $data['monitoringovertime'] = $monitoringovertime;
-        return view('Admin.MonitoringOvertime.show', $data);
+        return view('Admin.MonitoringOvertime.show', [
+            'monitoringovertime' => MonitoringOvertime::findOrFail($id),
+        ]);
     }
+    // function edit(Pegawai $absensi)
+    // {
+    //     $data['list_pegawai'] = Pegawai::all();
+    //     $data['pegawai'] = $absensi;
+    //     return view('Admin.DataPegawai.edit', $data);
+    // }
 
-    function edit(MonitoringOvertime $monitoringovertime)
+    public function edit($id)
     {
-        $data['list_monitoringovertime'] = MonitoringOvertime::all();
-        $data['monitoringovertime'] = $monitoringovertime;
-        return view('Admin.MonitoringOvertime.edit', $data);
+        return view('Admin.MonitoringOvertime.edit', [
+            'monitoringovertime' => MonitoringOvertime::findOrFail($id),
+        ]);
     }
 
     function destroy(MonitoringOvertime $monitoringovertime)
     {
         $monitoringovertime->delete();
 
-        return redirect('MonitoringOvertime')->with('danger', 'Data Berhasil Dihapus');
+        return redirect('Admin.MonitoringOvertime')->with('danger', 'Data Berhasil Dihapus');
     }
 }

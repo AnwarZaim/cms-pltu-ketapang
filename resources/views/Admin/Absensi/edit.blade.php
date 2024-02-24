@@ -21,7 +21,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Edit Data Pegawai</h4>
+                                    <h4 class="card-title">Edit Data Absensi</h4>
                                     <div class="table-responsive">
                                         <a href="{{ url('Absensi') }}" class="btn btn-sm btn-default mb-2"
                                             style="border: 1px solid #696CFF; color:#696CFF"><i
@@ -31,17 +31,11 @@
                                                 @csrf
                                                 @method('PUT')
                                                 <div class="row">
-                                                    <div class="col-md-12 mb-3">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input type="text" class="form-control"
                                                                 placeholder="Nama Pegawai" name="nama_pegawai"
                                                                 value="{{ $absensi->nama_pegawai }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control" placeholder="id_pegawai"
-                                                                name="nid" value="{{ $absensi->id_pegawai }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
@@ -68,49 +62,37 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input type="text" class="form-control"
-                                                                placeholder="Status" name="no_hp"
+                                                                placeholder="No-Hp" name="no_hp"
                                                                 value="{{ $absensi->no_hp }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input type="text" class="form-control"
-                                                                placeholder="Masa Kerja Mulai" name="from_aplod"
-                                                                value="{{ $absensi->from_aplod }}">
+                                                                placeholder="Form Upload" name="form_upload"
+                                                                value="{{ $absensi->form_upload }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input type="text" class="form-control"
-                                                                placeholder="Masa Kerja Selesai" name="kriteria"
+                                                                placeholder="Kriteria" name="kriteria"
                                                                 value="{{ $absensi->kriteria }}">
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <select name="absensi_id" class="form-select"
-                                                            aria-label="Default select example">
-                                                            @foreach ($list_absensi as $absensi)
-                                                                <option value="{{ $absensi->id }}"
-                                                                    {{ $absensi->nama_pegawai == $absensi->id ? 'selected' : '' }}>
-                                                                    {{ $absensi->nama_pegawai }}
-                                                                </option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-
                                                 </div>
                                                 <br>
                                                 <div class="button-group float-end">
-                                                    <a href="{{ url('Absensi') }}" class="btn btn-danger btn-sm"
-                                                        style="margin-right:10px"><i
-                                                            class="fa fa-trash "></i>Batal</a>
-                                                    <button class="btn btn-dark btn-sm"><i class="fa fa-save "></i>
-                                                        Simpan</button>
+                                                    <button class="btn btn-sm waves-effect waves-light ml-3 float-end"
+                                                        style="border: 1px solid red; color:red"
+                                                        type="submit">BATAL</button>
+                                                    <button class="btn btn-sm waves-effect waves-light float-end"
+                                                        style="border: 1px solid #696CFF; color:#696CFF;margin-right:5px"
+                                                        type="submit">SIMPAN</button>
                                                 </div>
                                             </form>
                                         </table>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

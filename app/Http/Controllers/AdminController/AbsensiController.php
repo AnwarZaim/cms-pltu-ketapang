@@ -19,18 +19,19 @@ class AbsensiController extends Controller
         return view('Admin.Absensi.create');
     }
 
+
     function store(Request $request)
     {
-        $request->validate([]);
+        $request->validate([
+        ]);
 
         $absensi = new Absensi();
         $absensi->nama_pegawai = request('nama_pegawai');
-        // $absensi->id_pegawai = request('id_pegawai');
         $absensi->tgl_lahir = request('tgl_lahir');
         $absensi->tempat_lahir = request('tempat_lahir');
         $absensi->jenis_kelamin = request('jenis_kelamin');
         $absensi->no_hp = request('no_hp');
-        $absensi->from_aplod = request('from_aplod');
+        $absensi->form_upload = request('form_upload');
         $absensi->kriteria = request('kriteria');
 
 
@@ -40,11 +41,13 @@ class AbsensiController extends Controller
         return redirect('Absensi')->with('success', 'Data Berhasil Di Simpan');
     }
 
+
     function show(Absensi $absensi)
     {
         $data['absensi'] = $absensi;
         return view('Admin.Absensi.show', $data);
     }
+
 
     function edit(Absensi $absensi)
     {
@@ -52,11 +55,9 @@ class AbsensiController extends Controller
         $data['absensi'] = $absensi;
         return view('Admin.Absensi.edit', $data);
     }
-
-    function destroy(Absensi $absensi)
-    {
+    function destroy(Absensi $absensi){
         $absensi->delete();
 
-        return redirect('Absensi')->with('danger', 'Data Berhasil Dihapus');
+        return redirect('Admin.Absensi')->with('danger', 'Data Berhasil Dihapus');
     }
 }

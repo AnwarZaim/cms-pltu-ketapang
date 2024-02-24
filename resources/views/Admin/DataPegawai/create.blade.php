@@ -69,45 +69,97 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationCustom04">Jenis Kelamin</label>
+                                                        <label for="validationCustom04">Jenis kelamin</label>
                                                         <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
                                                             <option value="">-Pilih Jenis Kelamin-</option>
-                                                            <option value="laki-laki">Lak-Laki</option>
+                                                            <option value="Laki-laki">Lak-Laki</option>
                                                             <option value="perempuan">Perempuan</option>
                                                         </select>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid zip.
                                                         </div>
                                                     </div>
+                
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationCustom04">Status</label>
-                                                        <input type="text" class="form-control" id="validationCustom05" placeholder="Status"
-                                                            required name="status">
-                                                            
+                                                        <label for="">Status</label>
+                                                        <select name="status" class="form-control">
+                                                            <option value="">-Pilih Status-</option>
+                                                            <option value="Menikah">Menikah</option>
+                                                            <option value="Belum-Menikah">Belum Menikah</option>
+                                                        </select>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid zip.
                                                         </div>
                                                     </div>
+                
                                                     <div class="col-md-4 mb-3">
-                                                        <label for="validationCustom04">Masa Kerja Mulai</label>
-                                                        <input type="date" class="form-control" id="validationCustom05"
-                                                            placeholder="Masa Kerja Mulai" required name="masa_kerja_mulai">
-                                                        <div class="invalid-feedback">
-                                                            Please provide a valid zip.
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 mb-3">
-                                                        <label for="validationCustom04">Masa Kerja Selesai</label>
-                                                        <input type="date" class="form-control" id="validationCustom05"
-                                                            placeholder="Masa Kerja Mulai" required name="masa_kerja_selesai">
-                                                        <div class="invalid-feedback">
-                                                            Please provide a valid zip.
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 mb-3">
-                                                        <label for="validationCustom04">Masa Kontrak</label>
+                                                        <label for="validationCustom04">Pendidikan</label>
                                                         <input type="text" class="form-control" id="validationCustom05"
-                                                            placeholder="Masa Kontrak" required name="masa_kontrak">
+                                                            placeholder="Pendidikan" required name="pendidikan">
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid zip.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom04">Sekolah/Universitas</label>
+                                                        <input type="text" class="form-control" id="validationCustom05"
+                                                            placeholder="Sekolah/Universitas" required name="sekolah_universitas">
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid zip.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom04">Alamat KTP</label>
+                                                        <input type="text" class="form-control" id="validationCustom05"
+                                                            placeholder="Alamat KTP" required name="alamat_ktp">
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid zip.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom04">Alamat Domisili</label>
+                                                        <input type="text" class="form-control" id="validationCustom05"
+                                                            placeholder="Alamat Domisili" required name="alamat_domisili">
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid zip.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom04">Nomor Hp</label>
+                                                        <input type="text" class="form-control" id="validationCustom05"
+                                                            placeholder="Nomor Hp" required name="no_hp">
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid zip.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom04">Email</label>
+                                                        <input type="text" class="form-control" id="validationCustom05"
+                                                            placeholder="Email" required name="email">
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid zip.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom04">FTK/NON-FTK</label>
+                                                        <input type="text" class="form-control" id="validationCustom05"
+                                                            placeholder="FTK/NON-FTK" required name="ftk_nonftk">
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid zip.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom04">Jabatan</label>
+                                                        <input type="text" class="form-control" id="validationCustom05"
+                                                            placeholder="Jabatan" required name="Jabatan">
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid zip.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom04">Klasifikasi Bidang</label>
+                                                        <input type="text" class="form-control" id="validationCustom05"
+                                                            placeholder="Klasifikasi Bidang" required name="klasifikasi_bidang">
                                                         <div class="invalid-feedback">
                                                             Please provide a valid zip.
                                                         </div>

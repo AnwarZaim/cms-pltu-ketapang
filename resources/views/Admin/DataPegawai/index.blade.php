@@ -35,9 +35,16 @@
                                                     <th>Tempat Lahir</th>
                                                     <th>Jenis Kelamin</th>
                                                     <th>Status</th>
-                                                    <th>Masa Kerja Mulai</th>
-                                                    <th>Masa Kerja Selesai</th>
-                                                    <th>Masa Kontrak</th>
+                                                    <th>Foto</th>
+                                                    {{-- <th>Pendidikan</th>
+                                                    <th>Sekolah/Universitas</th>
+                                                    <th>Alamat KTP</th>
+                                                    <th>Alamat Domisili</th>
+                                                    <th>Nomor Hp</th>
+                                                    <th>Email</th>
+                                                    <th>FTK/Non-FTK</th>
+                                                    <th>Jabatan</th>
+                                                    <th>Klasifikasi Bidang</th> --}}
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -61,9 +68,16 @@
                                                     <td>{{$pegawai->tempat_lahir}}</td>
                                                     <td>{{$pegawai->jenis_kelamin}}</td>
                                                     <td>{{$pegawai->status}}</td>
-                                                    <td>{{$pegawai->masa_kerja_mulai}}</td>
-                                                    <td>{{$pegawai->masa_kerja_selesai}}</td>
-                                                    <td>{{$pegawai->masa_kontrak}}</td>
+                                                    <td><img src="{{asset($pegawai->foto)}}" alt="" style="height: 70px; width:50px; object-fit:cover"></td>
+                                                    {{-- <td>{{$pegawai->pendidikan}}</td>
+                                                    <td>{{$pegawai->sekolah_universitas}}</td>
+                                                    <td>{{$pegawai->alamat_ktp}}</td>
+                                                    <td>{{$pegawai->alamat_domisili}}</td>
+                                                    <td>{{$pegawai->no_hp}}</td>
+                                                    <td>{{$pegawai->email}}</td>
+                                                    <td>{{$pegawai->ftk_nonftk}}</td>
+                                                    <td>{{$pegawai->jabatan}}</td>
+                                                    <td>{{$pegawai->klasifikasi_bidang}}</td> --}}
                                                 </tr>
                                                 @endforeach
                                             </tbody>

@@ -20,9 +20,8 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Data Absensi</h4>
-                                    <a href="{{ url('Absensi/create') }}" class="btn btn-primary waves-effect waves-light mb-3 float-right mt-1 ">
+                                    <a href="{{url('Absensi/create')}}" class="btn  waves-effect waves-light mb-3 float-end mt-1 " style="border: 1px solid #696CFF; color:#696CFF;"><i class="bx bx-plus float-right mt-1 mr-2"></i>
                                         Tambah Data Absensi
-                                        <i class="bx bx-plus float-right mt-1 mr-2"></i>
                                     </a>
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <table id="basic-datatable" class="table dt-responsive nowrap">
@@ -31,7 +30,6 @@
                                                     <th width="10px">no.</th>
                                                     <th width="100px">Aksi</th>
                                                     <th>Nama Pegawai</th>
-                                                    {{-- <th>ID Pegawai</th> --}}
                                                     <th>Tanggal Lahir</th>
                                                     <th>Tempat Lahir</th>
                                                     <th>Jenis Kelamin</th>
@@ -53,7 +51,6 @@
                                                         </div>
                                                     </td>
                                                     <td>{{ $absensi->nama_pegawai }}</td>
-                                                    {{-- <td>{{ $absensi->id_pegawai }}</td> --}}
                                                     <td>{{ $absensi->tgl_lahir }}</td>
                                                     <td>{{ $absensi->tempat_lahir }}</td>
                                                     <td>{{ $absensi->jenis_kelamin }}</td>

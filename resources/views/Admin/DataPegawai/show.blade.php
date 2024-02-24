@@ -52,16 +52,40 @@
                                                 <dd class="col-md-8">: {{ $pegawai->status }}</dd>
                                             </dl>
                                             <dl class="row">
-                                                <dt class="col-md-4">Masa Kerja Mulai</dt>
-                                                <dd class="col-md-8">: {{ $pegawai->masa_kerja_mulai }}</dd>
+                                                <dt class="col-md-4">Pendidikan</dt>
+                                                <dd class="col-md-8">: {{ $pegawai->pendidikan}}</dd>
                                             </dl>
                                             <dl class="row">
-                                                <dt class="col-md-4">Masa Kerja Selesai</dt>
-                                                <dd class="col-md-8">: {{ $pegawai->masa_kerja_selesai }}</dd>
+                                                <dt class="col-md-4">Sekolah/Universitas</dt>
+                                                <dd class="col-md-8">: {{ $pegawai->sekolah_universitas }}</dd>
                                             </dl>
                                             <dl class="row">
-                                                <dt class="col-md-4">Masa Kontrak</dt>
-                                                <dd class="col-md-8">: {{ $pegawai->masa_kontrak }}</dd>
+                                                <dt class="col-md-4">Alamat KTP</dt>
+                                                <dd class="col-md-8">: {{ $pegawai->alamat_ktp }}</dd>
+                                            </dl>
+                                            <dl class="row">
+                                                <dt class="col-md-4">Alamat Domisili</dt>
+                                                <dd class="col-md-8">: {{ $pegawai->alamat_domisil }}</dd>
+                                            </dl>
+                                            <dl class="row">
+                                                <dt class="col-md-4">Nomor HP</dt>
+                                                <dd class="col-md-8">: {{ $pegawai->no_hp }}</dd>
+                                            </dl>
+                                            <dl class="row">
+                                                <dt class="col-md-4">Email</dt>
+                                                <dd class="col-md-8">: {{ $pegawai->email}}</dd>
+                                            </dl>
+                                            <dl class="row">
+                                                <dt class="col-md-4">FTK/NON-FTK</dt>
+                                                <dd class="col-md-8">: {{ $pegawai->ftk_nonftk}}</dd>
+                                            </dl>
+                                            <dl class="row">
+                                                <dt class="col-md-4">Jabatan</dt>
+                                                <dd class="col-md-8">: {{ $pegawai->jabatan}}</dd>
+                                            </dl>
+                                            <dl class="row">
+                                                <dt class="col-md-4">Klasifikasi Bidang</dt>
+                                                <dd class="col-md-8">: {{ $pegawai->klasifikasi_bidang }}</dd>
                                             </dl>
                                             <dl class="row">
                                                 <dt class="col-md-4">foto</dt>
