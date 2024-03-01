@@ -41,43 +41,29 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input type="text" class="form-control"
-                                                                placeholder="Tanggal Lahir" name="tgl_lahir"
-                                                                value="{{ $absensi->tgl_kahir }}">
+                                                                placeholder="Kode PRK" name="kode_prk"
+                                                                value="{{ $absensi->kode_prk }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input type="text" class="form-control"
-                                                                placeholder="Tempat Lahir" name="tempat_lahir"
-                                                                value="{{ $absensi->tempat_lahir }}">
+                                                                placeholder="NIK" name="nik"
+                                                                value="{{ $absensi->nik }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input type="text" class="form-control"
-                                                                placeholder="Jens Kelamin" name="jenis_kelamin"
-                                                                value="{{ $absensi->jenis_kelamin }}">
+                                                                placeholder="Status" name="status"
+                                                                value="{{ $absensi->status }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input type="text" class="form-control"
-                                                                placeholder="No-Hp" name="no_hp"
-                                                                value="{{ $absensi->no_hp }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Form Upload" name="form_upload"
-                                                                value="{{ $absensi->form_upload }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Kriteria" name="kriteria"
-                                                                value="{{ $absensi->kriteria }}">
+                                                                placeholder="Bagian" name="bagian"
+                                                                value="{{ $absensi->bagian }}">
                                                         </div>
                                                     </div>
                                                 </div>

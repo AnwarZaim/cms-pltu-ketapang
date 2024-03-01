@@ -34,6 +34,7 @@
                                                     <th>Tanggal Lahir</th>
                                                     <th>Tempat Lahir</th>
                                                     <th>Jenis Kelamin</th>
+                                                    <th>Agama</th>
                                                     <th>Status</th>
                                                     <th>Foto</th>
                                                     {{-- <th>Pendidikan</th>
@@ -67,8 +68,9 @@
                                                     <td>{{$pegawai->tgl_lahir}}</td>
                                                     <td>{{$pegawai->tempat_lahir}}</td>
                                                     <td>{{$pegawai->jenis_kelamin}}</td>
+                                                    <td>{{$pegawai->agama}}</td>
                                                     <td>{{$pegawai->status}}</td>
-                                                    <td><img src="{{asset($pegawai->foto)}}" alt="" style="height: 70px; width:50px; object-fit:cover"></td>
+                                                    <td><img src="{{asset($pegawai->foto)}}" alt="" style="height: 60px; width:50px; object-fit:cover"></td>
                                                     {{-- <td>{{$pegawai->pendidikan}}</td>
                                                     <td>{{$pegawai->sekolah_universitas}}</td>
                                                     <td>{{$pegawai->alamat_ktp}}</td>

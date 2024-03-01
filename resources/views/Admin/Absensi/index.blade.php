@@ -7,7 +7,7 @@
                     <div class="col-12">
                         <div class="page-title-box d-flex align-items-center justify-content-between">
                             <div class="page-title">
-                                <h4 class="mb-0 font-size-18">Data Pegawai | Cleaning Servis</h4>
+                                <h4 class="mb-0 font-size-18">Data Absensi | Cleaning Servis</h4>
                             </div>
                         </div>
                     </div>
@@ -20,43 +20,50 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Data Absensi</h4>
-                                    <a href="{{url('Absensi/create')}}" class="btn  waves-effect waves-light mb-3 float-end mt-1 " style="border: 1px solid #696CFF; color:#696CFF;"><i class="bx bx-plus float-right mt-1 mr-2"></i>
+                                    <a href="{{ url('Absensi/create') }}"
+                                        class="btn  waves-effect waves-light mb-3 float-end mt-1 "
+                                        style="border: 1px solid #696CFF; color:#696CFF;"><i
+                                            class="bx bx-plus float-right mt-1 mr-2"></i>
                                         Tambah Data Absensi
                                     </a>
-                                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                    <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                         <table id="basic-datatable" class="table dt-responsive nowrap">
                                             <thead>
                                                 <tr>
                                                     <th width="10px">no.</th>
                                                     <th width="100px">Aksi</th>
                                                     <th>Nama Pegawai</th>
-                                                    <th>Tanggal Lahir</th>
-                                                    <th>Tempat Lahir</th>
-                                                    <th>Jenis Kelamin</th>
-                                                    <th>Kriteria</th>
+                                                    <th>Kode PRK</th>
+                                                    <th>NIK</th>
+                                                    <th>Status</th>
+                                                    <th>Bagian</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @foreach ($list_absensi as $absensi)
-                                                <tr>
-                                                    <td>{{ $loop->iteration }}</td>
-                                                    <td>
-                                                        <div class="btn-group ml-2">
-                                                            <a href="{{ url('Absensi', $absensi->id) }}" class="btn btn-sm btn-dark">
-                                                                <i class="bx bx-info-circle"></i></a>
-                                                            <a href="{{ url('Absensi', $absensi->id) }}/edit" class="btn btn-sm btn-warning btn-mat">
-                                                                <i class="bx bx-edit"></i></a>
-                                                            <x-button.delete url="Absensi" id="{{ $absensi->id }}" />
+                                                    <tr>
+                                                        <td>{{ $loop->iteration }}</td>
+                                                        <td>
+                                                            <div class="btn-group ml-2">
+                                                                <a href="{{ url('Absensi', $absensi->id) }}"
+                                                                    class="btn btn-sm btn-dark">
+                                                                    <i class="bx bx-info-circle"></i></a>
+                                                                <a href="{{ url('Absensi', $absensi->id) }}/edit"
+                                                                    class="btn btn-sm btn-warning btn-mat">
+                                                                    <i class="bx bx-edit"></i></a>
+                                                                <x-button.delete url="Absensi"
+                                                                    id="{{ $absensi->id }}" />
 
-                                                        </div>
-                                                    </td>
-                                                    <td>{{ $absensi->nama_pegawai }}</td>
-                                                    <td>{{ $absensi->tgl_lahir }}</td>
-                                                    <td>{{ $absensi->tempat_lahir }}</td>
-                                                    <td>{{ $absensi->jenis_kelamin }}</td>
-                                                    <td>{{ $absensi->kriteria }}</td>
+                                                            </div>
+                                                        </td>
+                                                        <td>{{ $absensi->nama_pegawai }}</td>
+                                                        <td>{{ $absensi->kode_prk }}</td>
+                                                        <td>{{ $absensi->nik }}</td>
+                                                        <td>{{ $absensi->status }}</td>
+                                                        <td>{{ $absensi->bagian }}</td>
 
-                                                </tr>
+                                                    </tr>
                                                 @endforeach
                                             </tbody>
                                         </table>

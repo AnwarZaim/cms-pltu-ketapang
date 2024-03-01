@@ -46,7 +46,7 @@
                                                         <td>{{ $loop->iteration }}</td>
                                                         <td>
                                                             <div class="btn-group ml-2">
-                                                                <a href="{{ url('MoinitoringOvertime', $monitoringovertime->id) }}"
+                                                                <a href="{{ url('MonitoringOvertime', $monitoringovertime->id) }}"
                                                                     class="btn btn-sm btn-dark">
                                                                     <i class="bx bx-info-circle"></i></a>
                                                                 <a href="{{ url('MonitoringOvertime', $monitoringovertime->id) }}/edit"

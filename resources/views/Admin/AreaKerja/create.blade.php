@@ -49,9 +49,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 mb-3">
-                                                    <label for="validationCustom05">Tanggal Bulan Tahun</label>
+                                                    <label for="validationCustom05">Tanggal</label>
                                                     <input type="date" class="form-control" id="validationCustom04"
-                                                        placeholder="Bulan" required name="bulan">
+                                                        placeholder="Tanggal" required name="tanggal">
                                                     <div class="invalid-feedback">
                                                         Masukan Bulan.
                                                     </div>
@@ -59,7 +59,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-3 mb-3">
-                                                    <label for="validationCustom04">From Aplod</label>
+                                                    <label for="validationCustom04">Foto</label>
                                                     <input type="file" class="form-control" id="validationCustom05"
                                                         placeholder="From Aplod" required name="from_aplod" accept="application/pdf">
                                                     <div class="invalid-feedback">

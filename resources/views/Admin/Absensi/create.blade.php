@@ -41,58 +41,41 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 mb-3">
-                                                    <label for="validationCustom03">Tanggal Lahir</label>
-                                                    <input type="date" class="form-control" id="validationCustom03"
-                                                        placeholder="Tanggal Lahir" required name="tgl_lahir">
+                                                    <label for="validationCustom03">Kode PRK</label>
+                                                    <input type="text" class="form-control" id="validationCustom03"
+                                                        placeholder="Kode PRk" required name="kode_prk">
                                                     <div class="invalid-feedback">
-                                                        Masukan Tanggal Lahir.
+                                                        Masukan Kode PRk.
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 mb-3">
-                                                    <label for="validationCustom05">Tempat Lahir</label>
+                                                    <label for="validationCustom05">NIK</label>
                                                     <input type="text" class="form-control" id="validationCustom04"
-                                                        placeholder="Tempat Lahir" required name="tempat_lahir">
+                                                        placeholder="NIK" required name="nik">
                                                     <div class="invalid-feedback">
-                                                        Please provide a valid state.
+                                                        Masukan NIK.
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                
-                                                <div class="col-md-3 mb-3">
-                                                    <label for="validationCustom04">Jenis Kelamin</label>
-                                                    <select name="jenis_kelamin" id="jenis_kelamin"
+                                            
+                                          
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="">Status</label>
+                                                    <select name="status"
                                                         class="form-control">
-                                                        <option value="">-Pilih Jenis Kelamin-</option>
-                                                        <option value="laki-laki">Lak-Laki</option>
-                                                        <option value="perempuan">Perempuan</option>
+                                                        <option value="">-Pilih status-</option>
+                                                        <option value="Daytime">Daytime</option>
+                                                        <option value="Shif">Shif</option>
                                                     </select>
                                                     <div class="invalid-feedback">
-                                                        Masukan Jenis Kelamin.
+                                                        Masukan Status.
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3 mb-3">
-                                                    <label for="validationCustom04">NO-Hp</label>
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="validationCustom04">Bagian</label>
                                                     <input type="text" class="form-control" id="validationCustom05"
-                                                        placeholder="no_hp" required name="no_hp">
+                                                        placeholder="bagian" required name="bagian">
                                                     <div class="invalid-feedback">
-                                                        Masukan Nomor Handphone.
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3 mb-3">
-                                                    <label for="validationCustom04">From Aplod</label>
-                                                    <input type="file" class="form-control" id="validationCustom05"
-                                                        placeholder="From Aplod" required name="from_aplod" accept="application/pdf">
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid zip.
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3 mb-3">
-                                                    <label for="validationCustom04">Kriteria</label>
-                                                    <input type="text" class="form-control" id="validationCustom05"
-                                                        placeholder="Kriteria" required name="kriteria">
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid zip.
+                                                        Masukan Bagian.
                                                     </div>
                                                 </div>
                                             </div>

@@ -24,7 +24,7 @@
                                         class="btn  waves-effect waves-light mb-3 float-end mt-1 "
                                         style="border: 1px solid #696CFF; color:#696CFF;"><i
                                             class="bx bx-plus float-right mt-1 mr-2"></i>
-                                        Tambah Data Pegawai
+                                        Tambah Data Area Kerja
                                     </a>
                                     <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                         style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -35,9 +35,8 @@
                                                     <th width="100px">Aksi</th>
                                                     <th>Nama Pegawai</th>
                                                     <th>Tempat Kerja</th>
-                                                    <th>Bulan</th>
-                                                    <th>Tahun</th>
-                                                    <th>From Upload</th>
+                                                    <th>Tanggal</th>
+                                                    <th>Foto</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -59,9 +58,8 @@
                                                         </td>
                                                         <td>{{ $areakerja->nama_pegawai }}</td>
                                                         <td>{{ $areakerja->tempat_kerja }}</td>
-                                                        <td>{{ $areakerja->bulan }}</td>
-                                                        <td>{{ $areakerja->tahun }}</td>
-                                                        <td>{{ $areakerja->form_upload }}</td>
+                                                        <td>{{ $areakerja->tanggal }}</td>
+                                                        <td><img src="{{asset($areakerja->foto)}}" alt="" style="height: 60px; width:50px; object-fit:cover"></td>
 
 
                                                     </tr>

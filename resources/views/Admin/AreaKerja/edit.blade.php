@@ -27,7 +27,7 @@
                                             style="border: 1px solid #696CFF; color:#696CFF"><i
                                                 class="bx bx-chevron-left "></i>Kembali</a>
                                         <table class="table table-editable table-nowrap align-middle table-edits">
-                                            <form action="{{ url('AreaKerja', $arakerja->id) }}" method="post">
+                                            <form action="{{ url('AreaKerja', $areakerja->id) }}" method="post">
                                                 @csrf
                                                 @method('PUT')
                                                 <div class="row">
@@ -35,36 +35,30 @@
                                                         <div class="form-group">
                                                             <input type="text" class="form-control"
                                                                 placeholder="Nama Pegawai" name="nama_pegawai"
-                                                                value="{{ $arakerja->nama_pegawai }}">
+                                                                value="{{ $areakerja->nama_pegawai }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input type="text" class="form-control"
                                                                 placeholder="Tempat Kerja" name="tempat_kerja"
-                                                                value="{{ $arakerja->tempat_kerja }}">
+                                                                value="{{ $areakerja->tempat_kerja }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Bulan" name="bulan"
-                                                                value="{{ $arakerja->bulan }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Tahun" name="tahun"
-                                                                value="{{ $arakerja->jenis_kelamin }}">
+                                                            <input type="date" class="form-control"
+                                                                placeholder="Tanggal" name="tanggal"
+                                                                value="{{ $areakerja->tanggal }}">
                                                         </div>
                                                     </div>
 
+
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
+                                                            <input type="file" class="form-control"
                                                                 placeholder="Form Upload" name="form_upload"
-                                                                value="{{ $arakerja->form_upload }}">
+                                                                value="{{ $areakerja->foto }}">
                                                         </div>
                                                     </div>
 

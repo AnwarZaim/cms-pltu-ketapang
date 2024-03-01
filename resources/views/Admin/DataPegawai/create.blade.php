@@ -3,7 +3,7 @@
         <div class="page-content">
             <div class="container-fluid">
                 <!-- start page title -->
-                <div class="row">
+                <div class="row"> 
                     <div class="col-12">
                         <div class="page-title-box d-flex align-items-center justify-content-between">
                             <div class="page-title">
@@ -79,7 +79,15 @@
                                                             Please provide a valid zip.
                                                         </div>
                                                     </div>
-                
+                                                    
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationCustom05">Agama</label>
+                                                        <input type="text" class="form-control" id="validationCustom04"
+                                                            placeholder="Agama" required name="agama">
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid state.
+                                                        </div>
+                                                    </div>
                                                     <div class="col-md-4 mb-3">
                                                         <label for="">Status</label>
                                                         <select name="status" class="form-control">
@@ -151,7 +159,7 @@
                                                     <div class="col-md-4 mb-3">
                                                         <label for="validationCustom04">Jabatan</label>
                                                         <input type="text" class="form-control" id="validationCustom05"
-                                                            placeholder="Jabatan" required name="Jabatan">
+                                                            placeholder="Jabatan" required name="jabatan">
                                                         <div class="invalid-feedback">
                                                             Please provide a valid zip.
                                                         </div>

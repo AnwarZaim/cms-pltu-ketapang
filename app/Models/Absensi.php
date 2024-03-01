@@ -10,7 +10,7 @@ class Absensi extends Model
 {
     protected $table = 'absensi';
     protected $fillable = [
-        'id','nama_pegawai','tgl_lahir','tempat_lahir','jenis_kelamin','no_hp','form_upload','kriteria'
+        'id','nama_pegawai','kode_prk','nik','status','bagian'
     ];
     function handLeUploadFoto()
     {

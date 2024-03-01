@@ -22,33 +22,13 @@ class DataPegawaiController extends Controller
 
     function store(Request $request)
     {
-        // $request->validate([
-        //     'nama_pegawai' => 'required',
-        //     'nid' => 'required|unique:pegawai',
-        //     'tgl_lahir' => 'required',
-        //     'tempat_lahir' => 'required',
-        //     'jenis_kelamin' => ['required', 'in:Laki-laki,Perempuan'],
-        //     'status' => ['required', 'in:Belum menikah,Sudah menikah,Duda,Janda'],
-        //     'masa_kerja_mulai' => 'required',
-        //     'masa_kontrak' => 'required',
-        // ], [
-        //     'nama_pegawai.required' => 'Nama Pegwai Wajib Diisi',
-        //     'nid.required' => 'NID Wwajib Diisi',
-        //     'nid.unique' => 'NID ini Sudah Digunakan',
-        //     'tgl_lahir.required' => 'Tanggal Lahir Wajib Diisi',
-        //     'tempat_lahir.required' => 'Tempat Lahir Wajib Diisi',
-        //     'jenis_kelamin.required' => 'Jenis Kelamin Wajib Diisi',
-        //     'status.required' => 'Status Wajib Diisi',
-        //     'masa_kerja_mulai.required' => 'Masa Kerja Mulai Wajib Diisi',
-        //     'masa_kontrak.required' => 'Masa Kontrak Wajib Diisi',
-        // ]);
-
         $pegawai = new Pegawai();
         $pegawai->nama_pegawai = request('nama_pegawai');
         $pegawai->nid = request('nid');
         $pegawai->tgl_lahir = request('tgl_lahir');
         $pegawai->tempat_lahir = request('tempat_lahir');
         $pegawai->jenis_kelamin = request('jenis_kelamin');
+        $pegawai->agama = request('agama');
         $pegawai->status = request('status');
         $pegawai->pendidikan = request('pendidikan');
         $pegawai->sekolah_universitas= request('sekolah_universitas');
@@ -65,23 +45,14 @@ class DataPegawaiController extends Controller
 
         return redirect('DataPegawai')->with('success', 'Data Berhasil Di Simpan');
     }
-    // function show(Pegawai $pegawai)
-    // {
-    //     $data['pegawai'] = $pegawai;
-    //     return view('Admin.DataPegawai.show', $data);
-    // }
+  
     public function show($id)
     {
         return view('Admin.DataPegawai.show', [
             'pegawai' => Pegawai::findOrFail($id),
         ]);
     }
-    // function edit(Pegawai $pegawai)
-    // {
-    //     $data['list_pegawai'] = Pegawai::all();
-    //     $data['pegawai'] = $pegawai;
-    //     return view('Admin.DataPegawai.edit', $data);
-    // }
+ 
 
     public function edit($id)
     {
@@ -99,6 +70,7 @@ class DataPegawaiController extends Controller
         if (request('tgl_lahir')) $pegawai->tgl_lahir = request('tgl_lahir');
         if (request('tempat_lahir')) $pegawai->tempat_lahir = request('tempat_lahir');
         if (request('jenis_kelamin')) $pegawai->jenis_kelamin = request('jenis_kelamin');
+        if (request('agama')) $pegawai->agama = request('agama');
         if (request('status')) $pegawai->status = request('status');
         if (request('pendidikan')) $pegawai->pendidikan = request('pendidikan');
         if (request('sekolah_universitas')) $pegawai->sekolah_universitas = request('sekolah_universitas');
@@ -107,13 +79,13 @@ class DataPegawaiController extends Controller
         if (request('no_hp')) $pegawai->no_hp = request('no_hp');
         if (request('email')) $pegawai->email = request('email');
         if (request('ftk_nonftk')) $pegawai->alamat_ktp = request('ftk_nonftk');
-        if (request('jabatan')) $pegawai->alamat_ktp = request('jabatan');
+        if (request('jabatan')) $pegawai->jabatan = request('jabatan');
         if (request('klasifikasi_bidang')) $pegawai->alamat_ktp = request('klasifikasi_bidang');
 
-        $pegawai->save();
         if (request('foto')) $pegawai->handLeUploadFoto();
-
+        
         return redirect('DataPegawai')->with('success', 'Berhasil di Edit');
+        $pegawai->save();
     }
 
     // function destroy(Pegawai $pegawai)

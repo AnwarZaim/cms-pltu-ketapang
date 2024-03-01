@@ -48,6 +48,10 @@
                                                 <dd class="col-md-8">: {{ $pegawai->jenis_kelamin }}</dd>
                                             </dl>
                                             <dl class="row">
+                                                <dt class="col-md-4">Agama</dt>
+                                                <dd class="col-md-8">: {{ $pegawai->agama }}</dd>
+                                            </dl>
+                                            <dl class="row">
                                                 <dt class="col-md-4">Status</dt>
                                                 <dd class="col-md-8">: {{ $pegawai->status }}</dd>
                                             </dl>
@@ -65,7 +69,7 @@
                                             </dl>
                                             <dl class="row">
                                                 <dt class="col-md-4">Alamat Domisili</dt>
-                                                <dd class="col-md-8">: {{ $pegawai->alamat_domisil }}</dd>
+                                                <dd class="col-md-8">: {{ $pegawai->alamat_domisili }}</dd>
                                             </dl>
                                             <dl class="row">
                                                 <dt class="col-md-4">Nomor HP</dt>
@@ -89,7 +93,7 @@
                                             </dl>
                                             <dl class="row">
                                                 <dt class="col-md-4">foto</dt>
-                                                <dd class="col-md-8">: {{ $pegawai->foto }}</dd>
+                                                <td><img src="{{asset($pegawai->foto)}}" alt="" style="height: 60px; width:50px; object-fit:cover"></td>
                                             </dl>
                                         </table>
                                     </div>

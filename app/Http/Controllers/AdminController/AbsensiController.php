@@ -22,17 +22,12 @@ class AbsensiController extends Controller
 
     function store(Request $request)
     {
-        $request->validate([
-        ]);
-
-        $absensi = new Absensi();
+        $absensi = new absensi();
         $absensi->nama_pegawai = request('nama_pegawai');
-        $absensi->tgl_lahir = request('tgl_lahir');
-        $absensi->tempat_lahir = request('tempat_lahir');
-        $absensi->jenis_kelamin = request('jenis_kelamin');
-        $absensi->no_hp = request('no_hp');
-        $absensi->form_upload = request('form_upload');
-        $absensi->kriteria = request('kriteria');
+        $absensi->kode_prk = request('kode_prk');
+        $absensi->nik = request('nik');
+        $absensi->status = request('status');
+        $absensi->bagian = request('bagian');
 
 
         $absensi->handLeUploadFoto();
@@ -41,23 +36,44 @@ class AbsensiController extends Controller
         return redirect('Absensi')->with('success', 'Data Berhasil Di Simpan');
     }
 
-
-    function show(Absensi $absensi)
+    public function show($id)
     {
-        $data['absensi'] = $absensi;
-        return view('Admin.Absensi.show', $data);
+        return view('Admin.Absensi.show', [
+            'absensi' => Absensi::findOrFail($id),
+        ]);
     }
 
 
-    function edit(Absensi $absensi)
+    public function edit($id)
     {
-        $data['list_absensi'] = Absensi::all();
-        $data['absensi'] = $absensi;
-        return view('Admin.Absensi.edit', $data);
+        return view('Admin.Absensi.edit', [
+            'absensi' => Absensi::findOrFail($id),
+        ]);
     }
-    function destroy(Absensi $absensi){
+
+
+    function update($id)
+    {
+        $absensi = absensi::find($id);
+        if (request('nama_pegawai')) $absensi->nama_pegawai = request('nama_pegawai');
+        if (request('kode_prk')) $absensi->kode_prk = request('kode_prk');
+        if (request('nik')) $absensi->nik = request('nik');
+        if (request('status')) $absensi->status = request('status');
+        if (request('bagian')) $absensi->jenis_kelamin = request('jenis_kelamin');
+
+
+        $absensi->save();
+        if (request('foto')) $absensi->handLeUploadFoto();
+
+        return redirect('Absensi')->with('success', 'Berhasil di Edit');
+    }
+
+
+    function destroy($id)
+    {
+        $absensi = absensi::find($id);
+        $absensi->handleDelete();
         $absensi->delete();
-
-        return redirect('Admin.Absensi')->with('danger', 'Data Berhasil Dihapus');
+        return redirect('Absensi')->with('danger', 'Data Berhasil Dihapus');
     }
 }

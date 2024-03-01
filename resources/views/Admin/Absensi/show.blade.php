@@ -32,32 +32,20 @@
                                                 <dd class="col-md-8">: {{ $absensi->nama_pegawai }}</dd>
                                             </dl>
                                             <dl class="row">
-                                                <dt class="col-md-4">Id Pegawai</dt>
-                                                <dd class="col-md-8">: {{ $absensi->id_pegawai }}</dd>
+                                                <dt class="col-md-4">Kode PRK</dt>
+                                                <dd class="col-md-8">: {{ $absensi->kode_prk}}</dd>
                                             </dl>
                                             <dl class="row">
-                                                <dt class="col-md-4">Tangal Lahir</dt>
-                                                <dd class="col-md-8">: {{ $absensi->tgl_lahir }}</dd>
+                                                <dt class="col-md-4">NIK</dt>
+                                                <dd class="col-md-8">: {{ $absensi->nik }}</dd>
                                             </dl>
                                             <dl class="row">
-                                                <dt class="col-md-4">Tempat Lahir</dt>
-                                                <dd class="col-md-8">: {{ $absensi->tempat_lahir }}</dd>
+                                                <dt class="col-md-4">Status</dt>
+                                                <dd class="col-md-8">: {{ $absensi->status }}</dd>
                                             </dl>
                                             <dl class="row">
-                                                <dt class="col-md-4">Jenis Kelamin</dt>
-                                                <dd class="col-md-8">: {{ $absensi->jenis_kelamin }}</dd>
-                                            </dl>
-                                            <dl class="row">
-                                                <dt class="col-md-4">NO-Hp</dt>
-                                                <dd class="col-md-8">: {{ $absensi->no_hp }}</dd>
-                                            </dl>
-                                            <dl class="row">
-                                                <dt class="col-md-4">From-Aplod</dt>
-                                                <dd class="col-md-8">: {{ $absensi->from_aplod }}</dd>
-                                            </dl>
-                                            <dl class="row">
-                                                <dt class="col-md-4">Kriteria</dt>
-                                                <dd class="col-md-8">: {{ $absensi->kriteria }}</dd>
+                                                <dt class="col-md-4">Bagian</dt>
+                                                <dd class="col-md-8">: {{ $absensi->bagian }}</dd>
                                             </dl>
                                         </table>
                                     </div>
