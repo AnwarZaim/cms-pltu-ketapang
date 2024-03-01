@@ -31,28 +31,28 @@ class DataPegawaiController extends Controller
         $pegawai->agama = request('agama');
         $pegawai->status = request('status');
         $pegawai->pendidikan = request('pendidikan');
-        $pegawai->sekolah_universitas= request('sekolah_universitas');
+        $pegawai->sekolah_universitas = request('sekolah_universitas');
         $pegawai->alamat_ktp = request('alamat_ktp');
         $pegawai->alamat_domisili = request('alamat_domisili');
         $pegawai->no_hp = request('no_hp');
         $pegawai->email = request('email');
         $pegawai->ftk_nonftk = request('ftk_nonftk');
         $pegawai->jabatan = request('jabatan');
-        $pegawai->klasifikasi_bidang= request('klasifikasi_bidang');
+        $pegawai->klasifikasi_bidang = request('klasifikasi_bidang');
 
-        $pegawai->handLeUploadFoto();
         $pegawai->save();
+        $pegawai->handLeUploadFoto();
 
         return redirect('DataPegawai')->with('success', 'Data Berhasil Di Simpan');
     }
-  
+
     public function show($id)
     {
         return view('Admin.DataPegawai.show', [
             'pegawai' => Pegawai::findOrFail($id),
         ]);
     }
- 
+
 
     public function edit($id)
     {
@@ -82,10 +82,11 @@ class DataPegawaiController extends Controller
         if (request('jabatan')) $pegawai->jabatan = request('jabatan');
         if (request('klasifikasi_bidang')) $pegawai->alamat_ktp = request('klasifikasi_bidang');
 
-        if (request('foto')) $pegawai->handLeUploadFoto();
-        
-        return redirect('DataPegawai')->with('success', 'Berhasil di Edit');
         $pegawai->save();
+
+        if (request('foto')) $pegawai->handLeUploadFoto();
+
+        return redirect('DataPegawai')->with('success', 'Berhasil di Edit');
     }
 
     // function destroy(Pegawai $pegawai)

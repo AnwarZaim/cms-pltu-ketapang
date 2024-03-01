@@ -9,9 +9,11 @@ use Illuminate\Support\Str;
 class Pegawai extends Model
 {
     protected $table = 'pegawai';
+    protected $primaryKey = 'id';
     protected $fillable = [
-        'id','nama_pegawai','nid','tgl_lahir','tempat_lahir','jenis_kelamin','agama','status','pendidikan','sekolah_universitas','alamat_ktp','alamat_domisili','no_hp','email','ftk_nonftk','jabatan','klasifikasi_bidang','foto'
+        'nama_pegawai', 'nid', 'tgl_lahir', 'tempat_lahir', 'jenis_kelamin', 'agama', 'status', 'pendidikan', 'sekolah_universitas', 'alamat_ktp', 'alamat_domisili', 'no_hp', 'email', 'ftk_nonftk', 'jabatan', 'klasifikasi_bidang', 'foto'
     ];
+
     function handLeUploadFoto()
     {
 
